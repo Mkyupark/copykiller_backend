@@ -1,0 +1,5 @@
+package flow.cp.repository;
+
+public class ImgResultRepository {
+
+}

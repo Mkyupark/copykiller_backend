@@ -1,0 +1,22 @@
+package flow.cp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import flow.cp.entity.LogEntity;
+import flow.cp.entity.UserEntity;
+import flow.cp.repository.CopyRepository;
+
+@Service
+public class CopyService {
+	@Autowired
+	CopyRepository copyRepository;
+	
+	//초기 영상비교에서 데이터 임시저장후 비교후 데이터 저장
+	public LogEntity createCopyLog(final LogEntity logEntity) {
+		return copyRepository.save(logEntity);
+	}
+	public LogEntity FindUserById(final String id) {
+		return copyRepository.getByIdEntity(id);
+	}
+}
