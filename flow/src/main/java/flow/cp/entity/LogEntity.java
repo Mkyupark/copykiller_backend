@@ -28,14 +28,18 @@ public class LogEntity {
 
 	//로그기록이 회원을 조회하는 일이 없어서 그냥 단일관계로 선언하였음.
 	@ManyToOne
-	@JoinColumn(name = "memeber_id")
+	@JoinColumn(name = "member_id")
 	private UserEntity user;
 	
 	@Column (nullable = false, length = 2024)
 	private String url1;
 	
+	private String title1;
+	
 	@Column (nullable = false, length = 2024)
 	private String url2;
+	
+	private String title2;
 	
 	private float textrate;
 	

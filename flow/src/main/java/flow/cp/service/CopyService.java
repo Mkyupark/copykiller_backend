@@ -38,18 +38,32 @@ public class CopyService {
 		return copyRepository.getByIdEntity(id);
 	}
 	
-	public Optional<LogEntity> FindLogEntityByUrl(final LogDTO logDTO) {
-		// 데이터 불러오기
-		Optional<LogEntity> log = copyRepository.getByEntity(logDTO.getUrl1(), logDTO.getUrl2());
-		if(log != null) {
-			LogEntity exsitingLog = log.get();
-			exsitingLog.setTextrate(logDTO.getTextrate());
-			exsitingLog.setImgrate(logDTO.getImgrate());
-			copyRepository.save(exsitingLog);
+//	public Optional<LogEntity> FindLogEntityByUrl(final LogDTO logDTO) {
+//		// 데이터 불러오기
+//		Optional<LogEntity> log = copyRepository.getByEntity(logDTO.getUrl1(), logDTO.getUrl2());
+//		if(log != null) {
+//			LogEntity exsitingLog = log.get();
+//			exsitingLog.setTextrate(logDTO.getTextrate());
+//			exsitingLog.setImgrate(logDTO.getImgrate());
+//			copyRepository.save(exsitingLog);
+//		}else {
+//			System.out.println("찾고자 하는 데이터 없음");
+//		}
+//		return log;
+//	}
+	
+	public LogEntity updateLogInfo(final LogDTO logDTO) {
+		LogEntity updateLogEntity = copyRepository.findByLogEntity(logDTO.getUrl1(), logDTO.getUrl2()); 
+		if(updateLogEntity != null) {
+			updateLogEntity.setImgrate(logDTO.getImgrate());
+			updateLogEntity.setTextrate(logDTO.getTextrate());
+			updateLogEntity.setTotalrate(logDTO.getTotalrate());
+			
+			LogEntity update = copyRepository.save(updateLogEntity);
+			return update;
 		}else {
-			System.out.println("찾고자 하는 데이터 없음");
+			return null;
 		}
-		return log;
 	}
 	public void createTextResult(final List<TextResultEntity> textResultList) {
 		for(TextResultEntity entity : textResultList) {
@@ -61,5 +75,16 @@ public class CopyService {
 		for(ImgResultEntity entity: imgResultList) {
 			imgResultRepository.save(entity);
 		}
+	}
+	
+	public List<LogEntity> sendLogData(final UserEntity user) {
+		return copyRepository.findAllLogEntity(user);
+	}
+	
+	public List<ImgResultEntity> sendImgData (final LogEntity log){
+		return imgResultRepository.findByLog(log);
+	}
+	public List<TextResultEntity> sendTextData (final LogEntity log){
+		return textResultRepository.findByLog(log);
 	}
 }

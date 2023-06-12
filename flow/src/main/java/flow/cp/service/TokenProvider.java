@@ -42,28 +42,28 @@ public class TokenProvider {
 		
 		return claims.getSubject();
 	}
-    @Value("${jwt.secret}")
-    private String secret;
-
-    @Value("${jwt.expiration}")
-    private Long expiration;
-
-
-    public String getTokenFromRequest(HttpServletRequest request) {
-        String bearerToken = request.getHeader("Authorization");
-        if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
-            return bearerToken.substring(7);
-        }
-        return null;
-    }
-
-    public void setTokenExpiration(String token, Date expirationDate) {
-        Claims claims = getAllClaimsFromToken(token);
-        claims.setExpiration(expirationDate);
-    }
-
-    private Claims getAllClaimsFromToken(String token) {
-    	return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
-        // 토큰에서 클레임 추출 로직
-    }
+//    @Value("${jwt.secret}")
+//    private String secret;
+//
+//    @Value("${jwt.expiration}")
+//    private Long expiration;
+//
+//
+//    public String getTokenFromRequest(HttpServletRequest request) {
+//        String bearerToken = request.getHeader("Authorization");
+//        if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
+//            return bearerToken.substring(7);
+//        }
+//        return null;
+//    }
+//
+//    public void setTokenExpiration(String token, Date expirationDate) {
+//        Claims claims = getAllClaimsFromToken(token);
+//        claims.setExpiration(expirationDate);
+//    }
+//
+//    private Claims getAllClaimsFromToken(String token) {
+//    	return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+//        // 토큰에서 클레임 추출 로직
+//    }
 }

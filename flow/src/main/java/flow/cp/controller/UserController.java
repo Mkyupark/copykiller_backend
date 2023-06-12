@@ -81,18 +81,18 @@ public class UserController {
 		return ResponseEntity.badRequest().body(responseDTO);			
 	}
 	
-	// 누르면 토큰을 반환하는 함수
-	@PostMapping("/logout")
-	public ResponseEntity<?> Logout(HttpServletRequest request){
-		String token = tokenprovider.getTokenFromRequest(request);
-		 if (token != null) {
-	            // 토큰이 존재하는 경우, 만료시간을 현재 시간으로 설정하여 토큰 무효화
-			 	tokenprovider.setTokenExpiration(token, new Date());
-	            // 토큰 반환
-	            return ResponseEntity.ok("Logout successful");  
-	        }
-	        return ResponseEntity.badRequest().body("Token not found");
-	  }
+//	// 누르면 토큰을 반환하는 함수
+//	@PostMapping("/logout")
+//	public ResponseEntity<?> Logout(HttpServletRequest request){
+//		String token = tokenprovider.getTokenFromRequest(request);
+//		 if (token != null) {
+//	            // 토큰이 존재하는 경우, 만료시간을 현재 시간으로 설정하여 토큰 무효화
+//			 	tokenprovider.setTokenExpiration(token, new Date());
+//	            // 토큰 반환
+//	            return ResponseEntity.ok("Logout successful");  
+//	        }
+//	        return ResponseEntity.badRequest().body("Token not found");
+//	  }
 
 // 카카오 로그인 코드 구현
 //	public String getKakaoAccessToken(String code) {
