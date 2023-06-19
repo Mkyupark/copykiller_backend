@@ -58,7 +58,8 @@ public class CopyService {
 			updateLogEntity.setImgrate(logDTO.getImgrate());
 			updateLogEntity.setTextrate(logDTO.getTextrate());
 			updateLogEntity.setTotalrate(logDTO.getTotalrate());
-			
+			updateLogEntity.setTitle1(logDTO.getTitle1());
+			updateLogEntity.setTitle2(logDTO.getTitle2());
 			LogEntity update = copyRepository.save(updateLogEntity);
 			return update;
 		}else {

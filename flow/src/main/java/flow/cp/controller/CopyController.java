@@ -27,7 +27,6 @@ import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.VideoAbuseReportReasonListResponse;
 
-import flow.cp.command.YoutubeCommandRunner;
 import flow.cp.dto.ImgResultDTO;
 import flow.cp.dto.LogDTO;
 import flow.cp.dto.ResponseDTO;
@@ -39,7 +38,6 @@ import flow.cp.entity.UserEntity;
 import flow.cp.service.CopyService;
 import flow.cp.service.TokenProvider;
 import flow.cp.service.UserService;
-import flow.cp.service.YoutubeService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 
@@ -59,11 +57,11 @@ public class CopyController {
 	@Autowired
 	public TokenProvider tokenProvider;
 	
-	@Autowired
-	public YoutubeService youtubeService;
-	
-	@Autowired
-	private YoutubeCommandRunner youtubeCommandRunner;
+//	@Autowired
+//	public YoutubeService youtubeService;
+//	
+//	@Autowired
+//	private YoutubeCommandRunner youtubeCommandRunner;
 	public String LogId;
 	
 	//영상비교페이지에서 클릭시 임시로 표절률 결과 없이 데이터 저장
@@ -163,16 +161,16 @@ public class CopyController {
 			return ResponseEntity.badRequest().body(responseDTO);
 		}
 	}
-	@PostMapping("/report")
-	public ResponseEntity<?> reportCopyKiller(){
-		try {
-			youtubeCommandRunner.run();
-			return ResponseEntity.ok().body(null);
-		}catch(Exception e) {
-			ResponseDTO responseDTO = ResponseDTO.builder().error(e.getMessage()).build();
-			return ResponseEntity.badRequest().body(responseDTO);
-		}
-	}
+//	@PostMapping("/report")
+//	public ResponseEntity<?> reportCopyKiller(){
+//		try {
+//			youtubeCommandRunner.run();
+//			return ResponseEntity.ok().body(null);
+//		}catch(Exception e) {
+//			ResponseDTO responseDTO = ResponseDTO.builder().error(e.getMessage()).build();
+//			return ResponseEntity.badRequest().body(responseDTO);
+//		}
+//	}
 	@PostMapping("/rollback")
 	public ResponseEntity<?> rollbacklogData(@RequestBody LogDTO logDTO){
 		try {

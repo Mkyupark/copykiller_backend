@@ -14,6 +14,8 @@ public class LogDTO {
 	private String token;
 	private String url1;
 	private String url2;
+	private String title1;
+	private String title2;
 	private String member_id;
 	private float imgrate;
 	private float textrate;
