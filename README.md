@@ -15,11 +15,8 @@
 ## 개요
   - 목적: UCC 저작권 침해 방지 및 예방    
   - 사용 언어
-      - 웹
-        - 프론트: react
-        - DB, 서버: spring boot, mysql
-      - 인공지능
-         - python, flask, Keras 
+    - 서버: spring boot
+    - DB: mysql
   - 사용 패키지 및 API:
     - 영상 재생 및 신고: youtube API  
     - 서버 배포: groom 
