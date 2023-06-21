@@ -41,7 +41,7 @@
   
 ## 코드 사용법  
 ### 디렉토리 구조
-![img](https://firebasestorage.googleapis.com/v0/b/a-living-dictionary.appspot.com/o/DIR%20Structure.png?alt=media&token=d7d01223-3d56-401f-b2d5-b8f928309317)
+![img](https://github.com/2023-CreativeDesign-flow/backend/blob/master/spring%20boot%20%EA%B5%AC%EC%A1%B0.png)
 ### 설명
 ###   - lib 폴더
 가장 기본이 되는 main.dart와 그 아래에 각 탭에 해당하는 PageClass가 존재합니다.  
