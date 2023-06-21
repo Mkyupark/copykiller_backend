@@ -1,4 +1,4 @@
-# 유튜브 카피킬러
+# 유튜브 카피킬러 - backend
 #### 2023-1 창의설계프로젝트 팀 플로우  
 해당 프로그램은 웹 기반으로 테블릿에서 유저에게 표절률이 의심되는 영상을 입력과 원본 영상을 입력시 영상 표절률을 제공하는 플렛폼입니다.
 주요 기능은 표절의심 구간 비교, 이전 결과 기록 저장, 이전 결과 기록 보기 등이 있으며 이것으로 영상을 표절하는 일을 사전에 방지하고 표절시 구체적인 수치로 신고를 할때 도움이 될 것으로 기대하고 있습니다. 
@@ -24,7 +24,7 @@
     - 영상 재생 및 신고: youtube API  
     - 서버 배포: groom 
   
-  - DB : Firebase(NoSQL)  
+  - DB : MYSQL
   - DB 구조 :  
 
 ![img](https://firebasestorage.googleapis.com/v0/b/a-living-dictionary.appspot.com/o/DB%20Structure.png?alt=media&token=4c21c918-3ffd-4009-b60d-35b2a8689876)
@@ -79,52 +79,26 @@ Supplementary 폴더 : 각 탭에서 추가적으로 필요한 페이지나 클�
   
   
   
-## 오픈소스, API의 출처와 버전
-### FLUTTER  
-#### GOOGLE MAP API  
-    google_maps_flutter: ^2.2.1  
-##### PLACES API  
-    flutter_google_places: ^0.3.0   
-#### KAKAO API  
-    kakao_flutter_sdk_user: ^1.2.2  
-#### FireBase  
-    firebase_core: ^2.1.0  
-    firebase_storage: ^11.0.5  
-    firebase_auth: ^4.1.3  
-    flutterfire_ui: ^0.4.3+20  
-    cloud_firestore: ^2.1.0
+## 창의설계 프로젝트- backend, API의 출처와 버전
+### DB
+    MYSQL: ^8.0.32
 
-
-#### etc
-    flutter:  
-      flutter_native_splash: ^2.2.16  
-      smooth_page_indicator: ^1.0.0+2  
-
-      cupertino_icons: ^1.0.2  
-      carousel_slider: ^4.1.1  
-      image_picker: ^0.8.6  
-      file_picker: ^5.2.2  
-      provider: ^6.0.4  
-      flutterfire_ui: ^0.4.3+20  
-  
-      flutter_webview_plugin: ^0.4.0  
-      flutter_web_auth: ^0.5.0  
-      uuid: ^3.0.7  
-      http: ^0.13.5  
-      flutter_provider: ^2.1.0  
-      fluttertoast: ^8.1.1  
-    
-
-### NOT FLUTTER
-#### Server(Node.js)  
-    firebase-admin  ^11.3.0  
-    firebase-auth   ^0.1.2  
-##### NAVER API  
-- https://developers.naver.com/docs/serviceapi/datalab/search/search.md#%EA%B0%9C%EC%9A%94  
-##### GEOCODING API 
-- https://developers.google.com/maps/documentation/geocoding/overview  
- 
- 
+#### Server
+  #### Spring boot - gradle 파일
+      implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    	implementation 'org.springframework.boot:spring-boot-starter-web'
+    	compileOnly 'org.projectlombok:lombok'
+    	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    	runtimeOnly 'com.mysql:mysql-connector-j'
+    	annotationProcessor 'org.projectlombok:lombok'
+    	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.6.7'
+    		testImplementation 'org.springframework.security:spring-security-test'
+    	implementation group:'io.jsonwebtoken', name:'jjwt', version:'0.9.1'
+    	implementation 'org.springframework.boot:spring-boot-starter-security'
+    	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.1'
+    	implementation group: 'com.google.apis', name: 'google-api-services-youtube', version: 'v3-rev212-1.25.0'
+    	implementation group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.34.1'
  
 ## 기여자   
   
