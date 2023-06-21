@@ -7,22 +7,22 @@
 
 <div align="center">  
   
-[![Thumbnail](https://user-images.githubusercontent.com/102962030/206456509-f2e7c97b-3ca0-4efd-a11b-c8fceba4595c.png)](https://youtu.be/M32EwZc6X_E)    
+[![Thumbnail](https://user-images.githubusercontent.com/102962030/206456509-f2e7c97b-3ca0-4efd-a11b-c8fceba4595c.png)](https://youtu.be/ek_KhaDyGWw)    
 
 </div>  
   
   
 ## 개요
-  - 목적: 자취 전반의 정보 제공을 통한 삶의 질 향상    
-  - 사용 언어: Dart, flutter, node.js  
-  - 사용 패키지 및 API:  
-    - Google Firebase: Database, storage, auth  
-    - Login: Kakao, Naver  
-    - Map: Google Map, Places API, Geocoding API  
-
-
-  - 서버: 카카오, 네이버 로그인 서버와 통신하기 위한 node.js 서버 구축  
-  - 서버 코드: https://github.com/2022-opensourse-mobile/2022-opensource-mobile-server
+  - 목적: UCC 저작권 침해 방지 및 예방    
+  - 사용 언어
+      - 웹
+        - 프론트: react
+        - DB, 서버: spring boot, mysql
+      - 인공지능
+         - python, flask, Keras 
+  - 사용 패키지 및 API:
+    - 영상 재생 및 신고: youtube API  
+    - 서버 배포: groom 
   
   - DB : Firebase(NoSQL)  
   - DB 구조 :  
