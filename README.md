@@ -7,7 +7,7 @@
 
 <div align="center">  
   
-[![Thumbnail](https://user-images.githubusercontent.com/102962030/206456509-f2e7c97b-3ca0-4efd-a11b-c8fceba4595c.png)](https://youtu.be/ek_KhaDyGWw)    
+[![Thumbnail](https://github.com/2023-CreativeDesign-flow/backend/blob/master/copykiller%20%EB%A9%94%EC%9D%B8.png)](https://youtu.be/ek_KhaDyGWw)    
 
 </div>  
   
