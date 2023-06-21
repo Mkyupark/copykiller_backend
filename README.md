@@ -24,7 +24,7 @@
   - DB : MYSQL
   - DB 구조 :  
 
-![img](https://firebasestorage.googleapis.com/v0/b/a-living-dictionary.appspot.com/o/DB%20Structure.png?alt=media&token=4c21c918-3ffd-4009-b60d-35b2a8689876)
+![img](https://github.com/2023-CreativeDesign-flow/backend/blob/master/DB%20%EA%B5%AC%EC%A1%B0.png)
 
 
 
