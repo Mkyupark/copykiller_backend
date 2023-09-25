@@ -24,7 +24,8 @@ public class UserService {
 		
 		if(userRepository.existsByEmail(email)) {
 			log.warn("이메일 이미 존재함. {}", email);
-			throw new RuntimeException("이미 존재하는 이메일");
+			//throw new RuntimeException("이미 존재하는 이메일");
+			return responsebody;
 		}
 		
 		return userRepository.save(user);

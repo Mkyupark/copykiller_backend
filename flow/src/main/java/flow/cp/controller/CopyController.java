@@ -74,7 +74,16 @@ public class CopyController {
 			
 			System.out.println(token);
 			System.out.println(id);
-			LogEntity sample = LogEntity.builder().user(userService.FindUserById(id)).url1(logDTO.getUrl1()).url2(logDTO.getUrl2()).build();			
+			LogEntity sample = LogEntity.builder()
+				.user(userService.FindUserById(id))
+				.url1(logDTO.getUrl1())
+				.title1(logDTO.getTitle1())
+				.url2(logDTO.getUrl2())
+				.title2(logDTO.getTitle2())
+				.textrate(logDTO.getTextrate())
+				.imgrate(logDTO.getImgrate())
+				.totalrate(logDTO.getTotalrate())
+				.build();
 			LogEntity temp = copyService.createCopyLog(sample);
 			LogId = temp.getId();
 			return ResponseEntity.ok().body(logDTO);
