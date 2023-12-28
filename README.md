@@ -87,4 +87,6 @@ controller와 repository의 중간다리 역할로 controller에서 받아온 �
     	implementation group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.34.1'
  
 
+## 시스템 구조
+![image](https://github.com/Mkyupark/copykiller_backend/assets/102354411/dd8f6460-f4dd-422d-8e71-011c0555669e)
 
